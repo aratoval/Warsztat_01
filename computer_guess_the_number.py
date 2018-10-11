@@ -27,6 +27,7 @@ def game():
 
         else:
             print("Do not cheat!")
+            counter -= 1
 
 
 game()
