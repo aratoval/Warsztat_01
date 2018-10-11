@@ -1,12 +1,13 @@
 def game():
 
-    print("Think of a number from 0 to 1000, and I will guess it in max. 10 attempts!")
-    answer = ""
-
     mins = 0
     maks = 1000
     counter = 0
     answer_list = ["you guessed", "less", "more"]
+
+    print("Think of a number from {} to {}, and I will guess it in max. 10 attempts!".format(
+            mins, maks))
+    answer = ""
 
     while answer != answer_list[0]:
 
