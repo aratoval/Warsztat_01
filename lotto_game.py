@@ -12,28 +12,27 @@ def lotto_game():
         try:
 
             user_number = float(input(
-                    "Podaj {} liczbę z przedziału [1, 49]: ".format(
+                    "Enter the {} number from the range [1, 49]: ".format(
                             len(user_number_list)+1)))
-            #user_number = float(user_number)
 
             if user_number < 1:
-                print("Liczba za mała!")
+                print("The number is too small!")
             elif user_number > 49:
-                print("Liczba za duża!")
+                print("The number is too big!")
             elif user_number in user_number_list:
-                print("Taka liczba została już podana!")
+                print("Such number has already been given!")
             elif (10 * user_number) % 10 != 0:
-                print("Podaj liczbę naturalną z przedziału [1, 49].")
+                print("Enter a natural number between [1, 49]!")
             else:
                 user_number_list.append(int(user_number))
 
         except ValueError:
-            print("To nie jest liczba!")
+            print("This is not a number!")
 
     user_number_list.sort()
     lotto_number.sort()
-    print("\nTwoje liczby to:      {}".format(user_number_list))
-    print("Wylosowane liczby to: {}".format(lotto_number))
+    print("\nYour numbers are:    {}".format(user_number_list))
+    print("The numbers drawn are: {}".format(lotto_number))
 
     hits = 0
     for i in user_number_list:
@@ -41,7 +40,7 @@ def lotto_game():
             hits += 1
 
     if hits > 2:
-        print("Ilość trafień {}".format(hits))
+        print("Number of hits: {}".format(hits))
 
 
 lotto_game()
