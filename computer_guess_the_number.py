@@ -30,5 +30,5 @@ def game():
             print("Do not cheat!")
             counter -= 1
 
-
-game()
+if __name__ == "__main__":
+    game()

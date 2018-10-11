@@ -43,4 +43,5 @@ def lotto_game():
         print("Number of hits: {}".format(hits))
 
 
-lotto_game()
+if __name__ == "__main__":
+    lotto_game()

@@ -39,4 +39,5 @@ def game():
             print("This is not a number.")
 
 
-game()
+if __name__ == "__main__":
+    game()
