@@ -5,11 +5,13 @@ def game():
 
     mins = 0
     maks = 1000
+    counter = 0
 
     while answer != "zgadłeś":
 
+        counter += 1
         guess = int((maks - mins) / 2) + mins
-        print("Zgaduję: {}".format(guess))
+        print("Próba {}, zgaduję: {}".format(counter, guess))
         answer = input()
 
         if answer == "zgadłeś":
