@@ -16,27 +16,27 @@ def game():
         counter += 1
         try:
             answer = float(input(
-                    "Zgadnij liczbę z zakresu [{}, {}], {} próba: ".format(
+                    "Guess the number in the range [{}, {}], {} attempt: ".format(
                             mins, maxs, counter)))
 
             if (10 * answer) % 10 != 0 or answer < 0:
                 counter -= 1
-                print("Podaj liczbę naturalną z zakresu [{}, {}]".format(mins, maxs))
+                print("Enter a natural number in the range [{}, {}]".format(mins, maxs))
             elif answer < mins or answer > maxs:
                 counter -= 1
-                print("Podaj liczbę z zakresu [{}, {}]".format(mins, maxs))
+                print("Enter a number in the range [{}, {}]".format(mins, maxs))
             else:
                 answer = int(answer)
                 if answer == guess:
-                    print("Zgadłeś!")
+                    print("You guessed!")
                 elif answer > guess:
-                    print("Za dużo!")
+                    print("Too much!")
                 elif answer < guess:
-                    print("Za mało!")
+                    print("Too small!")
 
         except ValueError:
             counter -= 1
-            print("To nie jest liczba.")
+            print("This is not a number.")
 
 
 game()
