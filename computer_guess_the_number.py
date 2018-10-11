@@ -16,13 +16,13 @@ def game():
         print("Próba {}, zgaduję: {}".format(counter, guess))
         answer = input()
 
-        if answer == "zgadłeś":
+        if answer == answer_list[0]:
             print("Wygrałem!")
 
-        elif answer == "za dużo":
+        elif answer == answer_list[1]:
             maks = guess
 
-        elif answer == "za mało":
+        elif answer == answer_list[2]:
             mins = guess
 
         else:
