@@ -1,4 +1,4 @@
-
+*.ini
 # Created by https://www.gitignore.io/api/vim,python,pycharm,virtualenv
 
 ### PyCharm ###
